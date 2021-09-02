@@ -36,7 +36,7 @@ const ObjectId = mongodb.ObjectId;
 	app.all("/*", (req, res, next) => {
 		res.header("Access-Control-Allow-Origin", "*");
 
-		res.header("Access-Control-Allow-Methods", "*");
+		res.header("Access-Control-Allow-Methods", "DELETE,PUT");
 
 		res.header(
 			"Access-Control-Allow-Headers",
