@@ -82,12 +82,9 @@ const ObjectId = mongodb.ObjectId;
 			return
 		}
 		
-
-
-
 		const personagem = await getPersonagemById(id);
-		console.info(personagens)
-		if(personagens){ //nesse caso o id é valido porem não encontrado 
+		
+		if(personagem === null){  
 			res.status(404).json({erro:"Personagem Não Encontrado"})
 			return
 		}
@@ -183,3 +180,13 @@ const ObjectId = mongodb.ObjectId;
 		console.info(`App rodando em http://localhost:${port}`);
 	});
 })();
+
+
+
+
+
+
+
+
+
+
