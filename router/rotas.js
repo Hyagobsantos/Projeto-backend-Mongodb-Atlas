@@ -3,8 +3,8 @@ const {home,listarPersonagens,listarPersonagensByID,criarPersonagem,atualizarPer
 const cors = require("cors")
 
 //Cors
-app.use(cors());
-app.options("*", cors())
+router.use(cors());
+router.options("*", cors())
 
 
 router.get("/home", home)
