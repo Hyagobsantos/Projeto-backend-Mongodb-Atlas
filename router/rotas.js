@@ -1,5 +1,11 @@
 const router = require('express').Router();
 const {home,listarPersonagens,listarPersonagensByID,criarPersonagem,atualizarPersonagem,deletarPersonagem} = require("../controller/personagens");
+const cors = require("cors")
+
+//Cors
+app.use(cors());
+app.options("*", cors())
+
 
 router.get("/home", home)
 router.get('/personagens/',listarPersonagens);
