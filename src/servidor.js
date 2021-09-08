@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(roteador);
 
 //Middlewares
-app.all('*', validacaoEndpoints);
+app.all("*", validacaoEndpoints);
 app.use(tratamentoErros);
 
 //Cors
